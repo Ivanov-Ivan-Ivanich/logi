@@ -1,3 +1,8 @@
+from urllib import response
+import requests
+import os
+from bs4 import BeautifulSoup
+import json
 def get_html(url):
     try:
         result = requests.get(url)
@@ -8,18 +13,16 @@ def get_html(url):
 
 
 def get_python_news():
-   html = get_html("https://github.com/Ivanov-Ivan-Ivanich/telegram/branches")
+   html = get_html("https://github.com/Ivanov-Ivan-Ivanich/logi/blob/mergeLog/merge.log")
    if html:
         soup = BeautifulSoup(html,'html.parser')
-        all_news = soup.find('div', id = ' repo-content-pjax-container', class_='repository-content')
+        all_news = soup.find('table', class_="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file")
+        
         respons = []
         for news in all_news:
-            title = news.find('div',class_ = 'd-flex flex-lg-justify-between')
-            url = news.find('div', class_='Box-header d-flex flex-items-center flex-justify-between')
-            a = news.find('a',class_='d-block d-md-none position-absolute top-0 bottom-0 left-0 right-0')['href']
+            title = soup.find('td',id="LC1",class_="blob-code blob-code-inner js-file-line").text
             respons.append({
-                "title":title,
-                "url":url,
-                "a":a
+                "title":title
             })
         return respons
+    

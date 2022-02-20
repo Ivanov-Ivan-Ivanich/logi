@@ -1,1 +1,27 @@
-hhhedthfdjfgjt
+0c77b7e1f13dd2d8a0a5f1dec04ff526038ece19 (HEAD -> mergeLog, origin/mergeLog) zalupaLogMerge
+a3208482decd9b74d625cdb43ed0c47d14d28c63 zalupa
+37d6ebd38f6e6eb9f350fcd86d032359fc7ae713 (origin/main, main) logi
+6854d90e846d020ff3779ce3178dd8124a41e6d6 (master) log
+
+C:\Users\User\merge>git log
+commit 0c77b7e1f13dd2d8a0a5f1dec04ff526038ece19 (HEAD -> mergeLog, origin/mergeLog)
+Author: lexa
+Date:   Sat Feb 19 23:13:50 2022 +0200
+
+    zalupaLogMerge
+
+commit a3208482decd9b74d625cdb43ed0c47d14d28c63
+Author: lexa 
+Date:   Sat Feb 19 23:10:14 2022 +0200
+
+    zalupa
+
+commit 37d6ebd38f6e6eb9f350fcd86d032359fc7ae713 (origin/main, main)
+Author: lexa 
+Date:   Sat Feb 19 22:37:37 2022 +0200
+
+    logi
+
+commit 6854d90e846d020ff3779ce3178dd8124a41e6d6 (master)
+Author: lexa
+Date:   Sat Feb 19 22:32:13 2022 +0200
