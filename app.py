@@ -17,12 +17,25 @@ def get_python_news():
    if html:
         soup = BeautifulSoup(html,'html.parser')
         all_news = soup.find('table', class_="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file")
-        
         respons = []
         for news in all_news:
-            title = soup.find('td',id="LC1",class_="blob-code blob-code-inner js-file-line").text
+            
+            title = soup.find('td',class_="blob-code blob-code-inner js-file-line")
             respons.append({
                 "title":title
             })
         return respons
-    
+
+def get_gitlab():
+    htmlab = get_html("https://github.com/Ivanov-Ivan-Ivanich/logi/blob/mergeLog/merge.log")
+    if html:
+        soup = BeautifulSoup(htmlab,'html.parser')
+        all_news = soup.find('table', class_="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file")
+        respons = []
+        for news in all_news:
+            
+            title = soup.find('td',class_="blob-code blob-code-inner js-file-line")
+            respons.append({
+                "title":title
+            })
+        return respons
